@@ -1,4 +1,3 @@
-
 const posts = [];
 let lastActivityTime = null;
 function updateLastUserActivityTime() {

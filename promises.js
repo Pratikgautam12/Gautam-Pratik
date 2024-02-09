@@ -1,34 +1,34 @@
-// Define getColdDrinks as a promise
+
 const getColdDrinks = () => {
     return new Promise((resolve, reject) => {
-      // Simulating getting cold drinks
+     
       setTimeout(() => {
-        // If husband got butter successfully
+        
         if (gotButter) {
           resolve("Got cold drinks");
         } else {
           reject(new Error("Could not get cold drinks"));
         }
-      }, 2000); // Simulating a delay of 2 seconds
+      }, 2000); 
     });
   };
-  const husbandGotButter = getButter(); // Assuming getButter is defined elsewhere
+  const husbandGotButter = getButter(); 
   const husbandGotColdDrinks = husbandGotButter.then(() => {
     return getColdDrinks();
   });
   
   husbandGotColdDrinks
     .then((message) => {
-      console.log(message); // "Got cold drinks"
+      console.log(message); 
     })
     .catch((error) => {
       console.error(error);
     });
     async function husbandGetsColdDrinks() {
         try {
-          await getButter(); // Assuming getButter is defined elsewhere
+          await getButter(); 
           const message = await getColdDrinks();
-          console.log(message); // "Got cold drinks"
+          console.log(message); 
         } catch (error) {
           console.error(error);
         }
